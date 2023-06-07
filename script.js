@@ -85,7 +85,7 @@ class Person {
         this.weight--
     }
     ageUp(){
-        this.ageUp++;this.height++;this.weight++;this.mood--;
+        this.age++;this.height++;this.weight++;this.mood--;
        this.bankAccount += 10
     }
     buyHamster(hamster){
@@ -93,5 +93,58 @@ class Person {
         this.mood +=10;
         this.bankAccount -= hamster.getPrice
     }
-
 }
+
+const ann = new Person("Ann") 
+ann.ageUp()
+     console.log(ann)
+
+//====================================
+// Create a Story with your Person class
+// Feel free to update or add methods to automate some of these tasks.
+
+// Instantiate a new Person named Timmy
+const timmy = new Person("Timmy")
+
+// Age Timmy five years
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+timmy.ageUp()
+console.log(timmy)
+// At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
+timmy.eat();timmy.eat();timmy.eat();timmy.eat();timmy.eat()
+console.log(timmy)
+// Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. Have him exercise five times
+timmy.exercise();timmy.exercise();timmy.exercise();timmy.exercise();timmy.exercise()
+console.log(timmy)
+// Age Timmy 9 years
+for(let i=0; i<9; i++){
+    timmy.ageUp() 
+}
+console.log(timmy)
+// Create a hamster named "Gus"
+const gus =  new Hamster("Gus")
+console.log(gus)
+// Set Gus's owner to the string "Timmy"
+gus.owner = "Timmy"
+console.log(gus)
+
+// Have Timmy "buy" Gus
+gus.buy = "Timmy"
+console.log(gus)
+// Age Timmy 15 years
+for(let i=0; i<15; i++){
+    timmy.ageUp()
+}
+console.log(timmy)
+// Have Timmy eat twice
+timmy.eat();timmy.eat()
+console.log(timmy)
+// Have Timmy exercise twice
+timmy.exercise();timmy.exercise()
+console.log(timmy)
+// 🔴 Hard Mode Save & Commit your work!
+// Your commit message should read something like:
+// "created timmys story" Easy Mode Keep Going Save and Run Code
