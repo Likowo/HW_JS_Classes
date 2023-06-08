@@ -1,10 +1,15 @@
-// Hamster
-// attributes: use this.nameofattribute e.g this.owner
+// Hamster === This is the class -- Must always start with an upper case e.g class Hamster
+
+// attributes: use format; this.nameofattribute e.g this.owner
 
 // owner - string, initially set as an empty string
 // name - string, set the name from parameter in constructor method
 // price - integer, set as 15
-// methods:
+
+// methods: Synthax for method is; feature of Hamster to be discribed(){variable to be called}
+//  e.g wheelRun(){
+//     console.log("squeak squeak")
+// }
 
 // wheelRun() - log "squeak squeak"
 // eatFood() - log "nibble nibble"
@@ -32,9 +37,8 @@ class Hamster {
 }
 
 //=================================
-// Person
-// attributes:
-
+// Person -- The class
+// attributes: this.age, etc
 // name - set name from parameter in constructor method
 // age - initially 0
 // height - initially 0
@@ -42,7 +46,12 @@ class Hamster {
 // mood - integer starting at 0 initially
 // hamsters - empty array initially
 // bankAccount - initially set to 0
-// methods:
+
+// methods: Synthax for method is; feature of Hamster to be discribed(){variable to be called}
+// e.g getName(){
+//     return this.name
+// }
+
 // getName() - returns name
 // getAge() - returns age
 // getWeight() - returns weight
@@ -96,7 +105,7 @@ class Person {
 }
 
 const ann = new Person("Ann") 
-ann.ageUp()
+// ann.ageUp()
      console.log(ann)
 
 //====================================
@@ -148,3 +157,77 @@ console.log(timmy)
 // 🔴 Hard Mode Save & Commit your work!
 // Your commit message should read something like:
 // "created timmys story" Easy Mode Keep Going Save and Run Code
+
+//===============================
+// Chef Make Dinners
+// class Dinner {
+
+// }
+
+// class Chef {
+
+// }
+// Chef should be a factory of Dinner-- > Define class Dinner as a subclass using the extend keyword and Encapsulate
+// Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+
+// --- 1st logic----
+class Dinner {
+    constructor(appetizer,entree,dessert){
+        this.appetizer = appetizer
+        this.entree = entree
+        this.dessert = dessert
+    } 
+    typeOfDinner(){
+        console.log(`This ia ${this.entree}`)
+    }
+}
+
+// ---- 2nd Logic ------>
+// Use factory function to make chef a factory == Start by using the var declaration key word to create an object
+let dinnerTypes = {
+    newDinner() {
+
+    }
+}
+
+
+   
+
+
+// Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+
+//------ 1st Logic----
+
+class Chef extends Dinner {
+    #meal;
+
+    constructor(Dinner1,Dinner2,dessert,meal){
+        super(dessert);
+        this.#meal = meal;
+    }
+     dinnerType(){
+        console.log(`This is ${this.dessert}, and it comes after ${this.#meal}.`);
+     }
+
+     returnMeal(){
+        return this.#meal 
+     } 
+} 
+let manny = new Chef("Manny")
+console.log(manny.dinnerType())
+
+//----- 2nd logic --->
+
+// Have the Chef create 3 dinners, log the dinners
+
+let eru = new Dinner("Eru","salad","ice cream")
+let ekwang = new Dinner("Ekwang","salad","cake")
+let kwacoco = new Dinner("kwacoco","olive","pie")
+console.log(eru)
+console.log(ekwang)
+console.log(kwacoco)
+      
+
+// 🔴 Hard Mode Save & Commit your work!
+// Your commit message should read something like:
+// "Dinner is served" Easy Mode Keep Going Save and Run Your Code
